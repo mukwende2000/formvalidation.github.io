@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 100%;
+    /* overflow: hidden; */
+}
+.container {
+    display: flex;
+}
+.cards {
+    background-image: linear-gradient(to left, hsl(249, 86%, 29%), hsl(278, 86%, 17%));
+    flex: .5;
+    width: 50px;
+    height: 100vh;
+    padding: 130px 0 0 100px;
+}
+.front {
+    background: url('images/bg-card-front.png') no-repeat center center/ cover;
+    height: 30vh;
+    width: 26vw;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.deco {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.fill {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 6px;
+}
+.stroke {
+    width: 20px;
+    height: 20px;
+    border: 1px solid#fff;
+    border-radius: 50%;
+}
+.back {
+    background: url('images/bg-card-back.png') no-repeat center center/ cover;
+    height: 200px;
+    width: 330px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding: 0 20px;
+    margin: 30px 100px;
+}
+.front > div:last-child {
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 35px;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+.details > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+.card-number {
+    text-align: center;
+    font-size: 29px;
+}
+.form {
+    flex: 2;
+    padding: auto 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label {
+    display: block;
+    margin: 30px 0 10px 0;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+input:focus {
+    outline: 0;
+}
+.message {
+    text-align: center;
+    display: none;
+}
+.message p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(42, 2, 80);
+}
+.message div {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: grey;
+}
+.number-input input,
+.name-input input {
+    border: 1px solid lightgrey;
+    color: lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    width: 500px;
+}
+.card-expiry input:first-child,
+.card-expiry input:nth-child(2) {
+    width: 50px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    padding: 4px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgb(69, 11, 122);
+}
+.card-expiry > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+.card-expiry div:first-of-type div:nth-child(1) input,
+.card-expiry div:first-of-type div:nth-child(2) input {
+    width: 80px;
+}
+.card-expiry div:first-of-type div:nth-child(3) input {
+    width: 145px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.card-expiry div:first-of-type div {
+    margin: 10px 0 10px 0;
+    font-size: .7rem;
+}
+.card-expiry div:first-of-type div:nth-child(3) div {
+    margin-left: 20px;
+}
+.cvc {
+    margin-left: 260px;
+}
+button {
+    margin: 20px 0;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    background-color: rgb(31, 6, 54);
+    transition: .4s;
+    cursor: pointer;
+}
+.error-text {
+    color: red;
+    font-family: sans-serif;
+    font-size: .79rem;
+    margin: 5px 0;
+}
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .cards {
+        width: 100%;
+        padding: 150px 0;
+        position: relative;
+    }
+    .back {
+        width: 80%;
+        height: 150px;
+        margin: auto;
+        padding: 30px;
+        position: absolute;
+        top: 10px;
+        left: 60px;
+    }
+    .front {
+        width: 80%;
+        height: 190px;
+        margin: auto;
+        font-size: 5px;
+        position: absolute;
+        top: 130px;
+        z-index: 1;
+        bottom: 40px;
+        left: 20px;
+    }
+    .details > div:first-child {
+        width: 100%;
+    }
+    .card-expiry input:first-child,
+    .card-expiry input:nth-child(2) {
+        width: 50px;
+        height: 35px;
+        border: 1px solid lightgrey;
+        padding: 4px;
+        border-radius: 5px;
+    }
+
+    .card-expiry input:nth-child(3) {
+        width: 190px;
+        height: 35px;
+        border: 1px solid lightgrey;
+        padding: 4px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    .number-input input,
+    .name-input input {
+    border: 1px solid lightgrey;
+    color: lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    width: 320px;
+}
+}

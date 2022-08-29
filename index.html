@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+      <div class="cards">
+        <div class="front">
+          <div class="deco">
+            <div class="fill"></div>
+            <div class="stroke"></div>
+          </div>
+          <div class="details">
+            <div class="card-number">
+              0000 0000 0000 0000
+            </div>
+            <div>
+              <div class="card-name">Jane Doe</div>
+              <div class="exp-date"><span class="month">00</span>/<span class="year">00</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="back">
+          <p class="cvv">000</p>    
+        </div>
+      </div>
+
+      <div class="form">
+          <form>
+              <div class="name-input">
+                    <label for="name">cardholder name</label>
+                    <input class="name" type="text" placeholder="e.g. Jane Applesses">
+                    <div class="error-text"></div>
+              </div>
+              <div class="number-input">
+                  <label for="number">cardholder number</label>
+                  <input class="number" type="text" placeholder="e.g. 1234 4567 8912 3456">
+                  <div class="error-text"></div>
+              </div>
+              <div class="card-expiry">
+                  <label><span class="expiry-date">exp.date(mm/yy)</span><span class="cvc">cvc</span></label>
+                  <div>
+                      <div>
+                        <input class="month-expiry" type="text" placeholder="MM">
+                        <div class="error-text"></div>
+                      </div>
+                      
+                      <div>
+                        <input class="year-expiry" type="text" placeholder="YY">
+                        <div class="error-text"></div>
+                      </div>
+      
+                      <div>
+                        <input class="cvv-input" type="text" placeholder="e.g 123">
+                        <div class="error-text"></div>
+                      </div>                    
+                  </div>
+              </div>
+              <button class="btn confirm">Confirm</button>
+         </form>
+         <div class="message">
+          <div><img src="images/icon-complete.svg" alt=""></div>
+          <p>thank you</p>
+          <div><small>we've added your card details</small></div>
+          <button class="btn continue">Continue</button>
+         </div>
+        </div>
+    </div>
+      
+  <!-- Completed state start -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
